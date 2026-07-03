@@ -20,7 +20,7 @@ install wsl
 - wsl
 - docker
 
-## docker setup
+# docker setup
 
 cloan the repo ```git clone https://github.com/mr-Mus99/Data-Engineer-Technica-Assessment.git && cd Data-Engineer-Technica-Assessment```
 windows users ```git clone https://github.com/mr-Mus99/Data-Engineer-Technica-Assessment.git ; cd Data-Engineer-Technica-Assessment```
@@ -46,13 +46,13 @@ run the following to load the data to the warehouse
 to remove the data from the warehouse and start again just run ```cd /app/task2-warehouse && node warehouse_schema.js```  and  
 ```cd /app/task2-warehouse && node ./etl-pipeline.js``` again
 
-run the following to access the warehouse database ```duckdb dwh.duckdb```
+run the following to access the warehouse database ```duckdb dwh.duckdb```  <br>
+    <br>
+     <br>
+     <br>
+# if u want to lunch without docker use the following commands
 
-
-
-
-
-### if u want to lunch without docker use the following commands
+cloan the repo and run  ``` npm install ```  "Data Engineer Technical Assessment" 
 
 ``` winget install Oracle.MySQL ```  
 
@@ -81,5 +81,7 @@ run the following to access the warehouse database ```duckdb dwh.duckdb```
 ``` source C:/path/to/your/project/dataBase/oltp_purchase.sql; ```  
 ``` source C:/path/to/your/project/dataBase/oltp_cashout.sql; ```  
 ``` source C:/path/to/your/project/dataBase/oltp_transfers.sql; ```  
+
+
 
 ### good luck
