@@ -17,8 +17,8 @@ let connection;
 connection = await mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "123", // ⚠️ Put your actual local password here
-  database: "oltp"  // ⚠️ Put your actual database name here
+  password: "123", //  Put your actual local password here
+  database: "oltp"  //  Put your actual database name here
 });
 console.log("loading data...");
 

@@ -18,7 +18,6 @@ async function ETLPipeline() {
       await duckDBconnection.run(`DELETE FROM ${tableConfigs[i].targetTable}`); // Delete existing data
       const [rows] = await mySqlconnection.query(currentTable); // Fetch data
       const length = rows.length;
-      // console.log("length", length, "table", tableConfigs[i].mysqlTable);
       const appender = await duckDBconnection.createAppender(tableConfigs[i].targetTable, "main"); // Create appender
       for (let j = 0; j < length; j++) { // Append data
 
