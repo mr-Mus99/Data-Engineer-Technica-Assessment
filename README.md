@@ -82,6 +82,4 @@ run the following to access the warehouse database ```duckdb dwh.duckdb```
 ``` source C:/path/to/your/project/dataBase/oltp_cashout.sql; ```  
 ``` source C:/path/to/your/project/dataBase/oltp_transfers.sql; ```  
 
-
-
-
+### good luck
