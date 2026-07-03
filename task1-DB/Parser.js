@@ -1,5 +1,4 @@
 import fs from "fs";
-console.log("node js version", process.version);
 
 export default function Parser(filePath) {
   // 1. Read the raw file
@@ -31,4 +30,3 @@ export default function Parser(filePath) {
   return { rows, columnsNames };
 }
 
-// (Parser("../accounts.csv"));

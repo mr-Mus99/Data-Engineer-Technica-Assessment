@@ -3,7 +3,7 @@
 
 ### for seamless execution please use docker 
 
-## docker installation like soo, please fallow your distribution guide to install docker
+## docker installation like soo, if you don't use windows, please fallow your distribution guide to install docker
 
 
 ``` winget install -e --id Docker.DockerDesktop ```
@@ -20,14 +20,18 @@ install wsl
 - wsl
 - docker
 
-## Docker setup
+## docker setup
+
+cloan the repo ```git clone https://github.com/mr-Mus99/Data-Engineer-Technica-Assessment.git && cd Data-Engineer-Technica-Assessment```
+windows users ```git clone https://github.com/mr-Mus99/Data-Engineer-Technica-Assessment.git ; cd Data-Engineer-Technica-Assessment```
+
 
 ```docker build -t etl-pipeline .```  
 ```docker run -it --name pipeline-run --rm etl-pipeline```  
 
 # affter this you will be inside the docker container
 
-## run the following load data to the database structure
+## run the following to load data to the database structure
 
 ```cd task1-DB/ && node loader.js```
 

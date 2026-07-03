@@ -3,13 +3,13 @@ import mysql from "mysql2/promise";
 
 
 
-const accounts = Parser("../accounts.csv");
-const transactions = Parser("../transactions.csv");
-const cards = Parser("../cards.csv");
-const cashouts = Parser("../cashout.csv");
-const customers = Parser("../customers.csv");
-const purchases = Parser("../purchase.csv");
-const transfares = Parser("../transfers.csv");
+const accounts = Parser("../data-Tables/accounts.csv");
+const transactions = Parser("../data-Tables/transactions.csv");
+const cards = Parser("../data-Tables/cards.csv");
+const cashouts = Parser("../data-Tables/cashout.csv");
+const customers = Parser("../data-Tables/customers.csv");
+const purchases = Parser("../data-Tables/purchase.csv");
+const transfares = Parser("../data-Tables/transfers.csv");
 
 console.log("connecting to database... ");
 
