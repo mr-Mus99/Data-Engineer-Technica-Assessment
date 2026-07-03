@@ -2,7 +2,7 @@ import { DuckDBInstance, dateValue, timestampValue } from "@duckdb/node-api";
 export const mysqlConfig = {
   host: "localhost",
   user: "root",         // Your MySQL username
-  password: "admin", // Your MySQL password
+  password: "123", // Your MySQL password
   database: "oltp" // Your operational database name
 };
 export const duckdbConfig = {
@@ -10,7 +10,7 @@ export const duckdbConfig = {
 };
 const tableConfigs = [
   {
-    mysqlTable: "CUSTOMERS",
+    mysqlTable: "customers", //customers
     targetTable: "dw_customers",
     columns: [
       { name: "customer_id", type: "VARCHAR" },
@@ -24,7 +24,7 @@ const tableConfigs = [
     ],
   },
   {
-    mysqlTable: "ACCOUNTS",
+    mysqlTable: "accounts", // accounts
     targetTable: "dw_accounts",
     columns: [
       { name: "account_id", type: "VARCHAR" },
@@ -40,7 +40,7 @@ const tableConfigs = [
     ],
   },
   {
-    mysqlTable: "CARDS",
+    mysqlTable: "cards", //cards
     targetTable: "dw_cards",
     columns: [
       { name: "card_id", type: "VARCHAR" },
@@ -56,7 +56,7 @@ const tableConfigs = [
     ]
   },
   {
-    mysqlTable: "TRANSACTIONS",
+    mysqlTable: "transactions", //transactions
     targetTable: "dw_transactions",
     columns: [
       { name: "transaction_id", type: "VARCHAR" },
@@ -73,7 +73,7 @@ const tableConfigs = [
     ]
   },
   {
-    mysqlTable: "PURCHASE",
+    mysqlTable: "purchase", // purchase
     targetTable: "dw_purchases",
     columns: [
       { name: "purchase_id", type: "VARCHAR" },
@@ -86,7 +86,7 @@ const tableConfigs = [
     ]
   },
   {
-    mysqlTable: "CASHOUT",
+    mysqlTable: "cashout", //cashouts
     targetTable: "dw_cashouts",
     columns: [
       { name: "cashout_id", type: "VARCHAR" },
@@ -101,7 +101,7 @@ const tableConfigs = [
     ]
   },
   {
-    mysqlTable: "TRANSFERS",
+    mysqlTable: "transfers", //transfers
     targetTable: "dw_transfers",
     columns: [
       { name: "transfer_id", type: "VARCHAR" },

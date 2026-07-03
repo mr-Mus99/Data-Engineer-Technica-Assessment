@@ -11,18 +11,31 @@ const customers = Parser("../customers.csv");
 const purchases = Parser("../purchase.csv");
 const transfares = Parser("../transfers.csv");
 
-;
+console.log("connecting to database... ");
 
 let connection;
 connection = await mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "admin", // ⚠️ Put your actual local password here
+  password: "123", // ⚠️ Put your actual local password here
   database: "oltp"  // ⚠️ Put your actual database name here
 });
+console.log("loading data...");
 
 
-const query = `INSERT INTO CUSTOMERS (${customers.columnsNames}) VALUES ?`;
+await connection.query('SET FOREIGN_KEY_CHECKS = 0;');
+// 2. Clear the data from the tables
+await connection.query('DELETE FROM customers;');
+await connection.query('DELETE FROM accounts;');
+await connection.query('DELETE FROM cards;');
+await connection.query('DELETE FROM cashout;');
+await connection.query('DELETE FROM purchase;');
+await connection.query('DELETE FROM transactions;');
+await connection.query('DELETE FROM transfers;');
+// 3. Turn safety constraints back on
+await connection.query('SET FOREIGN_KEY_CHECKS = 1;');
+
+const query = `INSERT INTO customers (${customers.columnsNames}) VALUES ?`;
 const query2 = `INSERT INTO accounts (${accounts.columnsNames}) VALUES ?`;
 const query3 = `INSERT INTO cards (${cards.columnsNames}) VALUES ?`;
 const query4 = `INSERT INTO cashout (${cashouts.columnsNames}) VALUES ?`;
@@ -46,5 +59,5 @@ const [result7] = await connection.query(query7, [transfares.rows]);
 
 connection.end();
 
-console.log("query: ", query);
+console.log("finished loading data");
 
