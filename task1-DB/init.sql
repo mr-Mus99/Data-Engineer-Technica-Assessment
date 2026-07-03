@@ -1,4 +1,7 @@
 -- Active: 1782753841018@@127.0.0.1@3306
+
+-- dont run this file this is only a preview of how the database was created , this file cotains errors that are fixed later
+-- import DateBase structure diractly from "./dataBase" file
 CREATE DATABASE IF NOT EXISTS oltp;
 
 USE oltp;
