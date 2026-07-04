@@ -1,9 +1,9 @@
 import { DuckDBInstance, dateValue, timestampValue } from "@duckdb/node-api";
 export const mysqlConfig = {
   host: "localhost",
-  user: "root",         // Your MySQL username
-  password: "123", // Your MySQL password
-  database: "oltp" // Your operational database name
+  user: "root",         //  MySQL username
+  password: "123", //  MySQL password
+  database: "oltp" //   database name
 };
 export const duckdbConfig = {
   path: "./dwh.duckdb"
